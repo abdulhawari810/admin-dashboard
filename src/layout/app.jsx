@@ -10,12 +10,12 @@ export default function App() {
       <SidebarProvider>
         <SideMenuBar />
 
-        <section className="pl-7 w-full">
-          <div className="flex items-center w-full">
+        <section className="md:pl-7 w-full">
+          <div className="flex items-center w-full pl-4 md:pl-0">
             <SidebarTrigger />
             <Navbar />
           </div>
-          <main className="w-full px-11">
+          <main className="w-full px-5 md:px-11">
             <Outlet />
           </main>
         </section>

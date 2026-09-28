@@ -61,9 +61,13 @@ export default function TablePesanan() {
             Transaksi terakhir yang masuk
           </p>
         </div>
-        <NavLink className={"flex items-center text-sm text-primary gap-2"}>
+        <NavLink
+          className={
+            "flex items-center text-xs md:text-sm text-primary gap-0 md:gap-2"
+          }
+        >
           <span>Lihat Semua</span>
-          <ArrowUpRight className="w-4! h-4!" />
+          <ArrowUpRight className="md:w-4! md:h-4! w-3! h-3!" />
         </NavLink>
       </section>
       <section className="mt-5">

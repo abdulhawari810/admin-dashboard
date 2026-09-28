@@ -26,36 +26,38 @@ export default function Navbar() {
   return (
     <>
       <nav className="flex items-center justify-between w-full h-20 sticky top-0 bg-background px-1">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                render={
-                  <NavLink
-                    to={"/"}
-                    className={"text-text-secondary"}
-                    onClick={() => toast.success("Navigasi ke Dashboard")}
-                  >
-                    Dashboard
-                  </NavLink>
-                }
-              />
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                render={
-                  <NavLink
-                    to={"/"}
-                    onClick={() => toast.success("Navigasi ke Overview")}
-                  >
-                    Overview
-                  </NavLink>
-                }
-              />
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <section>
+          <Breadcrumb className={"hidden md:flex"}>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  render={
+                    <NavLink
+                      to={"/"}
+                      className={"text-text-secondary"}
+                      onClick={() => toast.success("Navigasi ke Dashboard")}
+                    >
+                      Dashboard
+                    </NavLink>
+                  }
+                />
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  render={
+                    <NavLink
+                      to={"/"}
+                      onClick={() => toast.success("Navigasi ke Overview")}
+                    >
+                      Overview
+                    </NavLink>
+                  }
+                />
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </section>
         <section className="flex items-center gap-2">
           <section className="flex items-center gap-5">
             <NavLink onClick={() => toast.success("Membuka pencarian")}>
